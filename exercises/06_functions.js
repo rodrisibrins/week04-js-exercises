@@ -3,10 +3,12 @@ function addNumbers(numOne, numTwo) {
     var add = numOne + numTwo;
     return add;
 }
+
 var numbersTotal = addNumbers(50, 50);
 console.log('Exercise 6.a:', numbersTotal);
+
 //6.b)
-function addNumbers(numOne, numTwo) {
+function checkIsNumber(numOne, numTwo) {
     if (isNaN(numOne) || isNaN(numTwo)) {
         alert('Exercise 6.b: One of the parameters is not a number');
         return NaN;
@@ -15,18 +17,22 @@ function addNumbers(numOne, numTwo) {
         return add;
     }
 }
-var checkAddNumbers = addNumbers('string', 2);
+
+var checkAddNumbers = checkIsNumber('string', 2);
 console.log('Exercise 6.b:', checkAddNumbers);
+
 //6.c)
 function validateInteger(number1) {
     if (Number.isInteger(number1)) {
         return true;
     }
 }
+
 var testInteger = validateInteger(5);
 console.log('Exercise 6.c:', testInteger);
+
 //6.d)
-function secondAddNumbers(numOne, numTwo) {
+function isNotNumberOrInteger(numOne, numTwo) {
     if (isNaN(numOne) || isNaN(numTwo)) {
         alert('Exercise 6.d: One of the parameters is not a number');
         return NaN;
@@ -38,19 +44,24 @@ function secondAddNumbers(numOne, numTwo) {
         return add;
     }
 }
-var numToInteger = secondAddNumbers(2, 4.5);
+
+var numToInteger = isNotNumberOrInteger(2, 4.5);
 console.log('Exercise 6.d:', numToInteger);
+
 //6.e)
-function validateIsNumber(a, b) {
-    if (isNaN(a) || isNaN(b)) {
+function validateIsNumber(numberOne, numberTwo) {
+    if (isNaN(numberOne) || isNaN(numberTwo)) {
         alert('Exercise 6.e: One of the parameters is not a number');
-        return console.log('Exercise 6.e:', NaN);
+        return NaN;
+    } else {
+        var add = numberOne + numberTwo;
+        return add;
     }
 }
-function thirdAddNumber(c, d) {
-    validateIsNumber(c, d);
-    var total = c + d;
-    return total;
+
+function newAddNumber(c, d) {
+    console.log('Exercise 6.e:', validateIsNumber(c, d));
 }
-var nestedFunctions = thirdAddNumber('string', 50);
-console.log('Exercise 6.e:', nestedFunctions);
+
+newAddNumber('Hello World', 500);
+

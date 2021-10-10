@@ -1,5 +1,6 @@
 //4.a)
 var randomNumber = Math.random();
+
 if (randomNumber > 0.5) {
     alert('Exercise 4.a: Greater than 0,5');
 } else {
@@ -7,6 +8,7 @@ if (randomNumber > 0.5) {
 }
 //4.b)
 var age = Math.round((Math.random() * 100));
+
 if (age <= 2) {
     alert('Exercise 4.b: Bebe');
 } else if (age >= 3 && age <= 12) {
